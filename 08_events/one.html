@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Set timeout and set Interval</h1>
+    <h4>Chai & code</h4>
+    <button id="start">Start</button>
+    <button class="stop">Stop</button>
+    <script >
+        const start = document.querySelector("#start")
+        const stop = document.querySelector('.stop')
+        const h4 = document.querySelector('h4')
+        
+
+        // setTimeout(function(){
+        //     console.log("ppiooo");
+        // },5000)
+        function changeText(){
+            h4.innerHTML = '<h2>YYYYYY</h2>'
+        }
+        const int = setTimeout(changeText,5000)
+
+        stop.addEventListener('click', function(){
+            clearTimeout(int)
+            console.log('stop clicked');
+        })
+
+    </script>
+</body>
+</html>

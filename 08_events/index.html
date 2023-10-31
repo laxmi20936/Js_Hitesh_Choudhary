@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #4f4f4f";>
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+   <script>
+    // This method does not give add features. Also addEventListerners gives propagation ability
+    //    document.getElementById('japan').onclick = function(e){
+    //     alert("Japan clicked");
+    //     console.log("Japan clicked",e);
+    //    }
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clickedhhooossaw")
+    //     // e.stopImmediatePropagation()
+    //     // e.stopImmediatePropagation()
+    //     // e.stopPropagation()
+    //     // console.log(e)
+    // }, )
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside ul")
+    //     // e.stopPropagation()
+    //     // console.log(e)
+    // }, false)
+
+    // document.getElementById("google").addEventListener('click', function(e){
+    //     console.log("a clicked");
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("lakshmi", 2+1);
+    // })
+// ======================1st method=======================================================
+    // const images = document.querySelectorAll('img')
+    // // const images1 = document.querySelector('#owl')
+    // console.log(images);
+    
+    // images.forEach(function(item){
+    //     console.log(item);
+    //     item.addEventListener('click',function(e){
+    //         console.log("ll",e.target)
+    //         console.log("llo",e.target.parentElemet)
+    //         e.target.parentElement.remove()
+    //     })
+    // })
+
+// --------------------------2nd method--------------------------------
+document.querySelector("#images").addEventListener("click", function(e){
+    console.log(e.target);
+    if(e.target.tagName == 'IMG'){
+        const parentLI = e.target.parentNode
+        parentLI.remove()
+    }
+})
+//     const parentLI = e.target.parentNode
+//     parentLI.remove()
+// })
+    
+    
+
+   </script>
+</body>
+</html>

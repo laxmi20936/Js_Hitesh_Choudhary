@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Click start button to change the background color</h1>
+        <button id = 'start'>Start</button>
+        <button id = "stop">Stop</button>
+    </div>
+    <script>
+        const start = document.getElementById('start')
+        const stop = document.querySelector('#stop')
+        let id;
+        
+        const randomColor = () =>{
+            const hex = '0123456789ABCDEF'
+            let hash = '#'
+            for(let i = 0; i < 6 ; i++){
+                const randomNumber = Math.floor(Math.random() * 16)
+                hash = hash + hex[randomNumber]
+                // console.log(randomNumber, hash);
+
+            }
+            return hash
+        }
+
+        // console.log(randomColor())
+
+        const changeBg = function(){
+                document.body.style.backgroundColor = randomColor()
+        }
+
+        const startButton = () =>{
+            if(id === null  || id === undefined){
+            id= setInterval(changeBg,1000)
+            console.log(id,"lk");
+            }
+
+            // OR
+            // if(!id){
+            //     id= setInterval(changeBg,1000)
+            //     console.log(id,"lkk");
+            // }
+        }
+
+        const stopButton = function(){
+            console.log('stopp');
+            clearInterval(id)
+            id = null
+            console.log(id,"stop");
+        }
+        start.addEventListener('click', startButton)
+        stop.addEventListener('click', stopButton)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JS</li>
+        <li>PU</li>
+    </ul>
+</body>
+<script>
+    function addLang(lang){
+        const parent = document.querySelector('.language')
+        // console.log(parent);
+        const li = document.createElement('li')
+        li.innerHTML = lang
+        // console.log(li);
+        parent.appendChild(li)
+    }
+
+    addLang("Golang")
+    addLang("Golang11")
+
+
+    function addOptiLang(lang){
+      const parent = document.querySelector('.language')
+      const li = document.createElement('li')
+      li.appendChild(document.createTextNode(lang))
+      parent.appendChild(li)
+    }
+
+    addOptiLang("ok")
+    addOptiLang("oabch")
+
+    // EDIT 
+    const child = document.querySelector('li:nth-child(2)')
+    // console.log(child);
+    // child.innerHTML = "ppppppppppppppppp"
+    const li = document.createElement('li')
+    li.textContent = "qqiiiqq"
+    child.replaceWith(li)
+
+    // EDIT
+    const first = document.querySelector('li:first-child')
+    // console.log(first);
+    first.outerHTML ="<li>javascript</li>"
+
+    // Remove
+
+    const second = document.querySelector('li:last-child')
+    // console.log(second);
+    second.remove()
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const parent = document.createElement('h1')
+        console.log(parent);
+        parent.innerText = "oooom "  //not optimised (innerText will replace the previous one and will traverse the whole dom )
+        parent.className="parent"
+        parent.id = "head"  //not optimised
+        parent.setAttribute('id', 'om') //optimised
+        parent.setAttribute('title', 'firstHead') //optimised
+
+        // optimised way
+        const text = document.createTextNode("mao mani")
+        parent.appendChild(text)
+        document.body.appendChild(parent)
+    </script>
+</body>
+</html>

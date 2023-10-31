@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button class ='stop'>Stop</button>
+    <script>
+        let intervalId;
+        const start = document.querySelector('#start')
+        const stop = document.querySelector('.stop')
+
+        const  displayDate = function(){
+            const date = new Date()
+            console.log(date.toLocaleString())
+        }
+
+        const startButton = () => {
+            intervalId = setInterval(displayDate,2000)
+            console.log("laxmi");
+            
+        }
+        function stopButton(){
+             clearInterval(intervalId)
+             console.log("cleared");
+        }
+        start.addEventListener('click',startButton)
+        stop.addEventListener('click',stopButton)
+    </script>
+</body>
+</html>
