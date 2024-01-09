@@ -2,13 +2,18 @@ const myArr =[0,1,2,33,4]
 const myHeros = ["shaktiman", "naagraj"]
 // console.log(myHeros);
 
-const str = new String("ppp")
-const Arr2 = new Array(11,22)
-const obj = new Object({name:"lll", age: 12344, city:"mum"})
+let sc = "33ab"
+console.log(typeof sc,"ll");
+console.log(typeof(sc),"ll");
 
-// console.log(str.indexOf('k'));
-// console.log(Arr2);
-// console.log(obj.city);
+const str = new String("ppk")
+const Arr2 = new Array(11,22,'p')
+const obj = new Object({name:"lll", age: 12344, city:"mum", [Arr2]: 123})
+
+console.log(str['2']);
+console.log(str[2]);
+console.log(typeof Arr2['2']);
+console.log(obj[Arr2]);
 
 // myArr.push(6)
 // myArr.pop()

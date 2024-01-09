@@ -5,7 +5,7 @@ const b ="xyz"
 // console.log(`the value of ${a} and ${b}`);
 
 const newString = new String("laxmia")
-// console.log(newString);
+console.log(newString);
 
 // console.log(newString[0]);
 // console.log(newString['1']);
