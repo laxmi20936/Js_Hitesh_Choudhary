@@ -1,4 +1,5 @@
 const a = 1;
+// fp
 
 // console.log(a);
 
